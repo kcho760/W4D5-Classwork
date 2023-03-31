@@ -18,3 +18,29 @@ describe "#two_sum" do
         end
     end
 end
+
+describe "#my_transpose" do
+    context "When given a matrix" do
+        subject(:matrix) {[
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8]
+          ]}
+        it "returns a matrix with row-column swapped indicies" do
+            expect(matrix.my_transpose).to eq [
+                [0, 3, 6],
+                [1, 4, 7],
+                [2, 5, 8]
+              ]
+        end
+    end
+end
+
+describe "#stock_picker" do
+    context "When given an array of stock prices" do
+        subject(:prices) {[6,2,1,8,0,5,1,9,4,3,7,9]}
+        it "will return the most profitable buy and sell days" do #indicies
+            expect(prices.stock_picker).to eq [5,8]
+        end
+    end
+end
